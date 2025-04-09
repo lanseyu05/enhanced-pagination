@@ -1,48 +1,43 @@
 # Element Plus Pagination Enhancement
 
-This project enhances the Element Plus pagination component by adding direct navigation to the first and last pages, improving the user experience for large datasets.
+[![npm version](https://badge.fury.io/js/element-plus-pagination-enhancement.svg)](https://badge.fury.io/js/element-plus-pagination-enhancement)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## Features
+> A powerful enhancement for Element Plus Pagination component that adds first/last page navigation and improves user experience for large datasets.
 
-- Direct navigation to first and last pages
-- Maintains all original Element Plus pagination functionality
-- Seamless integration with existing Element Plus projects
-- Improved user experience for large datasets
+## 🚀 Features
 
-## Installation
+- ⚡ Direct navigation to first and last pages
+- 🔄 Maintains all original Element Plus pagination functionality
+- 🎯 Seamless integration with existing Element Plus projects
+- 📊 Optimized for large datasets
+
+## 📚 Documentation
+
+- [English Documentation](docs/README.en.md)
+- [中文文档](docs/README.zh.md)
+
+## 🛠️ Quick Start
 
 ```bash
+# npm
 npm install element-plus-pagination-enhancement
-# or
+
+# yarn
 yarn add element-plus-pagination-enhancement
+
+# pnpm
+pnpm add element-plus-pagination-enhancement
 ```
 
-## Usage
+## 🔍 Keywords
 
-```vue
-<template>
-  <el-pagination
-    v-model:current-page="currentPage"
-    v-model:page-size="pageSize"
-    :total="total"
-    :page-sizes="[10, 20, 50, 100]"
-    layout="total, sizes, prev, pager, next, jumper, first, last"
-  />
-</template>
+Element Plus, Vue 3, Pagination, First Page, Last Page, Navigation, UI Component, Data Table, Large Dataset
 
-<script setup>
-import { ref } from 'vue'
+## 🤝 Contributing
 
-const currentPage = ref(1)
-const pageSize = ref(10)
-const total = ref(1000)
-</script>
-```
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-## Why This Enhancement?
+## 📄 License
 
-The standard Element Plus pagination component lacks direct navigation to the first and last pages, which can be inconvenient when dealing with large datasets. This enhancement adds these features while maintaining compatibility with the original component.
-
-## License
-
-MIT 
+[MIT](LICENSE) 
