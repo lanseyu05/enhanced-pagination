@@ -116,7 +116,6 @@ I'll help you set up the Git configuration and create a README for your Element 
 
 ---
 
-
 3. Let's initialize the Git repository and make the initial commit:
 
 
@@ -1523,8 +1522,6 @@ PS D:\workspace\element-plus-pagination>
 
 ---
 
-
-
 看起来我们需要处理一些依赖问题。让我们修复这些错误：
 
 1. 移除不必要的依赖和文件：
@@ -1648,11 +1645,82 @@ PS D:\workspace\element-plus-pagination>
 
 ---
 
-Cancelled
+```bash
+npm run build
+```
+
+```
+PS D:\workspace\element-plus-pagination> npm run build
+
+> element-plus-pagination-enhancement@1.0.0 build
+> vue-tsc && vite build
+
+The CJS build of Vite's Node API is deprecated. See https://vite.dev/guide/troubleshooting.html#vite-
+dist/style.css    0.75 kB │ gzip: 0.34 kB
+dist/index.es.js  9.20 kB │ gzip: 2.50 kB
+Entry module "src/index.ts" is using named and default exports together. Consumers of your bundle wil
+l have to use `ElementPlusPaginationEnhancement.default` to access the default export, which may not
+be what you want. Use `output.exports: "named"` to disable this warning.
+dist/style.css     0.75 kB │ gzip: 0.34 kB
+dist/index.umd.js  7.31 kB │ gzip: 2.32 kB
+✓ built in 339ms
+
+```
 
 ---
 
+太好了！构建成功了。现在我们可以发布到 npm 了。以下是发布步骤：
 
+1. 首先，确保你已经登录到 npm：
+```bash
+npm login
+```
+
+2. 然后，发布包：
+```bash
+npm publish
+```
+
+注意事项：
+1. 发布前确保你的 npm 账号已经验证了邮箱
+2. 如果这是你的第一次发布，包名可能需要添加 scope（例如：@your-username/element-plus-pagination-enhancement）
+3. 如果你想发布测试版本，可以使用 `npm publish --tag beta`
+
+发布后，其他人就可以通过以下方式安装你的包：
+```bash
+npm install element-plus-pagination-enhancement
+```
+
+使用方式：
+```vue
+<template>
+  <enhanced-pagination
+    v-model:current-page="currentPage"
+    v-model:page-size="pageSize"
+    :total="total"
+    :page-sizes="[10, 20, 50, 100]"
+    layout="total, sizes, prev, pager, next, jumper, first, last"
+  />
+</template>
+
+<script setup>
+import { EnhancedPagination } from 'element-plus-pagination-enhancement'
+import 'element-plus-pagination-enhancement/dist/style.css'
+
+const currentPage = ref(1)
+const pageSize = ref(10)
+const total = ref(1000)
+</script>
+```
+
+我们已经：
+1. 优化了项目结构
+2. 更新了构建配置
+3. 添加了必要的文档和许可证
+4. 移除了不必要的依赖
+5. 成功构建了项目
+
+现在这个包已经准备好发布到 npm 了。你需要我帮助执行发布步骤吗？
 
 ---
 
