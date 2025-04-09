@@ -1,6 +1,6 @@
 {
   "name": "element-plus-pagination-enhancement",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
   "description": "A powerful enhancement for Element Plus Pagination component that adds first/last page navigation",
   "main": "dist/index.js",
@@ -29,8 +29,16 @@
     "data-table",
     "large-dataset"
   ],
-  "author": "Your Name",
+  "author": "luoqing <275282243@qq.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yourusername/element-plus-pagination-enhancement.git"
+  },
+  "homepage": "https://github.com/yourusername/element-plus-pagination-enhancement#readme",
+  "bugs": {
+    "url": "https://github.com/yourusername/element-plus-pagination-enhancement/issues"
+  },
   "dependencies": {
     "element-plus": "^2.5.6",
     "vue": "^3.4.21"
